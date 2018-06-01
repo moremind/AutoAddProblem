@@ -1,5 +1,5 @@
 """
-:function: 通过python与selenium将mongoDB中的题目数据自动添加网站中
+:function: MongoDB配置以及其他配置
 :author:hefengen
 :date:2018/04/15
 :email:hefengen@hotmail.com
@@ -21,8 +21,8 @@ Headers = {
 
 # MongoDB配置
 MONGO_URI = 'localhost'
-MONGO_DATABASE = 'nyist_problem'
-MONGO_TABLE = 'problem_name'
+MONGO_DATABASE = 'bzoj'
+MONGO_TABLE = 'problem'
 
 # Service_Agrs配置
 SERVICE_ARGS = ['--load-images=true', '--disk-cache=true']
