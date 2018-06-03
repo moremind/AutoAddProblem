@@ -29,13 +29,13 @@ QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加�
 
 
 * 启动爬虫并检查数据库是否存在数据
-* 1. 修改爬虫配置:
+1. 修改爬虫配置:
 
  url在bzoj.py
+ 
  MongoDB数据配置在settings.py
 
-
-* 2.执行爬虫：scrapy crawl bzoj
+2. 执行爬虫：scrapy crawl bzoj
 
 * 执行自动加题
 > 也需要修改您的url以及mongoDB配置，以及OJ的用户名、密码。

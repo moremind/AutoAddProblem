@@ -150,11 +150,10 @@ def add_data_to_page():
                 title.send_keys(problem['problem_name'])
 
                 pat = 'src="(.*?)"'
+                regex = re.compile(pat, re.S)
                 is_description = re.search(pat, problem['description'], re.S)
                 if (is_description != None):
-                    description_text = problem['description'].replace(
-                        re.findall(r'src="(.*?)"', problem['description'], re.S)[0],
-                        '/public/' + re.findall(r'src="(.*?)"', problem['description'], re.S)[0])
+                    description_text = regex.sub(lambda m: 'src="/public/' + m.group(1) + '"', problem['description'])
                 else:
                     description_text = problem['description']
                 description.send_keys(description_text)
@@ -162,9 +161,8 @@ def add_data_to_page():
                 # 输入框
                 is_input = re.search(pat, problem['input'], re.S)
                 if (is_input != None):
-                    input_text = problem['input'].replace(re.findall(r'src="(.*?)"', problem['input'], re.S)[0],
-                                                          '/public/' +
-                                                          re.findall(r'src="(.*?)"', problem['input'], re.S)[0])
+                    # 通过正则表达式替换
+                    input_text = regex.sub(lambda m: 'src="/public/' + m.group(1) + '"', problem['input'])
                 else:
                     input_text = problem['input']
                 input.send_keys(input_text)
@@ -172,9 +170,7 @@ def add_data_to_page():
                 # 输出框
                 is_output = re.search(pat, problem['output'], re.S)
                 if (is_output != None):
-                    output_text = problem['output'].replace(re.findall(r'src="(.*?)"', problem['output'], re.S)[0],
-                                                            '/public/' +
-                                                            re.findall(r'src="(.*?)"', problem['output'], re.S)[0])
+                    output_text = regex.sub(lambda m: 'src="/public/' + m.group(1) + '"', problem['output'])
                 else:
                     output_text = problem['output']
                 output.send_keys(output_text)
@@ -197,8 +193,7 @@ def add_data_to_page():
 
                 is_hint = re.search(pat, problem['hint'], re.S)
                 if (is_hint != None):
-                    hint_text = problem['hint'].replace(re.findall(r'src="(.*?)"', problem['hint'], re.S)[0],
-                                                        '/public/' + re.findall(r'src="(.*?)"', problem['hint'], re.S)[0])
+                    hint_text = regex.sub(lambda m: 'src="/public/' + m.group(1) + '"', problem['hint'])
                 else:
                     hint_text = problem['hint']
                 hint.send_keys(hint_text)
