@@ -39,7 +39,7 @@ QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加�
 ## 解压与重新压缩数据
 
 * 你需要修改文件路径与压缩路径：
-
+	
 	路径设置在pack_sample.py。
 	start_dir = "E:\\Problem\\Testcase\\no"    # 需要遍历的目录
 	zip_dir = "E:\\Problem\\Testcase\\ok"      # 解压后的目录
@@ -60,7 +60,7 @@ QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加�
 3. pymongo
 
 * 执行自动加题
-> 也需要修改您的url以及mongoDB配置，以及OJ的用户名、密码。
+> 也需要修改您的url以及mongoDB配置，以及OJ的管理员的用户名、密码。
 
 1. url在add_problem.py
 2. MongoDB配置在settings.py
@@ -69,7 +69,6 @@ QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加�
 
 * 执行：python add_problem.py
 
-* 
 
 # 某些bug
 * 因为BZOJ数据问题，可能导致添加题目突然中止，你可能需要执行删除数据库文档的命令，然后重新执行：python add_problem.py即可再次添加题目。
