@@ -5,10 +5,6 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymongo
-import time
-import pymysql
-from twisted.enterprise import adbapi
-
 
 class OnlinejudgeproblemBzojPipeline(object):
     def process_item(self, item, spider):
