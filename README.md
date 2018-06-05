@@ -36,6 +36,20 @@ QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加�
 
 * 执行爬虫：scrapy crawl bzoj
 
+## 解压与重新压缩数据
+
+* 你需要修改文件路径与压缩路径：
+
+	路径设置在pack_sample.py。
+	start_dir = "E:\\Problem\\Testcase\\no"    # 需要遍历的目录
+	zip_dir = "E:\\Problem\\Testcase\\ok"      # 解压后的目录
+
+
+你需要执行以下命令：
+	
+	python pack_sample.py 
+	# 如果您懂python程序设计，可以写多线程解压缩。
+
 ## 图片位置
 在本项目中已经提供BZOJ，所以您可以直接在BZOJ解压包中看到JudgeOnline找到upload以及images两个图片目录，你只需要将这个两个目录复制到已经部署好的qduoj的 public目录下。
 ![dir][2]
@@ -51,8 +65,11 @@ QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加�
 1. url在add_problem.py
 2. MongoDB配置在settings.py
 3. OJ用户名以及密码在config.py
+4. 修改zip_dir = "E:\\Problem\\Testcase\\ok"为您重新压缩后的目录。
 
 * 执行：python add_problem.py
+
+* 
 
 # 某些bug
 * 因为BZOJ数据问题，可能导致添加题目突然中止，你可能需要执行删除数据库文档的命令，然后重新执行：python add_problem.py即可再次添加题目。
