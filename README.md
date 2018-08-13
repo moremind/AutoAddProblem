@@ -2,17 +2,6 @@
 
 QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加轻松。前提是您需要获得各OJ的测试数据。
 
-# 数据（某OJ数据&已经解压完成的）
-1000-1999数据链接：https://pan.baidu.com/s/1SvCgulQt8rn8m7w0cbMExQ 密码：jg7m
-
-
-# 题目数据
-
-https://finen-1251602255.cos.ap-shanghai.myqcloud.com/file/bzoj_problem.zip
-
-您可以直接通过MongoDB将将该数据导入到您的Mongo中，导入命令请您自行搜索！
-
-
 # 概况
 
 目前主要模块分为
@@ -25,47 +14,26 @@ https://finen-1251602255.cos.ap-shanghai.myqcloud.com/file/bzoj_problem.zip
 # 需要安装的软件
 
 * Python
-
 * MongoDB(V3.4)
-
 * MongoDB 客户端工具-推荐使用RoBo 3T
 
-# 准备
-## 解压获取已准备好的BZOJ
-你需要将BZOJ目录下的压缩文件解压，解压至你的web服务器目录下。
+# 数据（某OJ数据&已经解压完成的）
+1000-1999-Testcase数据链接：https://pan.baidu.com/s/1SvCgulQt8rn8m7w0cbMExQ 密码：jg7m
+2000-2499-Testcase数据链接：https://pan.baidu.com/s/1tgr1M-VsRrzaEjXPmA3NCA 密码：4mpf
 
+# 题目数据
 
-## 安装scrapy
-具体安装文档请见docs。
+https://finen-1251602255.cos.ap-shanghai.myqcloud.com/file/bzoj_problem.zip
+您可以直接通过MongoDB将将该数据导入到您的Mongo中，导入命令请您自行搜索！
 
+> 如果您对爬虫有兴趣可以参看1.0版本进行对题目数据进行爬取。
+https://github.com/hirCodd/AutoAddProblem/blob/master/README_1.0.md
 
-## 启动爬虫并检查数据库是否存在数据
-* 修改爬虫配置并执行爬虫:
-
-1. url在bzoj.py
-2. MongoDB数据配置在settings.py
-
-* 执行爬虫：scrapy crawl bzoj
-
-## 解压与重新压缩数据
-
-* 你需要修改文件路径与压缩路径：
-	
-	路径设置在pack_sample.py。
-	start_dir = "E:\\Problem\\Testcase\\no"    # 需要遍历的目录
-	zip_dir = "E:\\Problem\\Testcase\\ok"      # 解压后的目录
-
-
-你需要执行以下命令：
-	
-	python pack_sample.py 
-	# 如果您懂python程序设计，可以写多线程解压缩。
-
-## 图片位置
-在本项目中已经提供BZOJ，所以您可以直接在BZOJ解压包中看到JudgeOnline找到upload以及images两个图片目录，你只需要将这个两个目录复制到已经部署好的qduoj的 public目录下。
+# 图片位置
+在本项目中已经提供BZOJ，所以您可以直接在BZOJ解压包中看到JudgeOnline找到upload以及images两个图片目录，你只需要将这个两个目录复制到已经部署好的qduoj的public目录下即可。
 ![dir][2]
 
-## 安装自动加题所需要的库
+# 安装自动加题所需要的库
 1. webdriver
 2. selenium
 3. pymongo
