@@ -3,7 +3,7 @@
 QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加轻松。前提是您需要获得各OJ的测试数据。
 
 # 数据（某OJ数据&已经解压完成的）
-magnet:?xt=urn:btih:RYPNHWY37IJYSBHPMLNBW7XLABNB3QNP&dn=ok.zip&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&xl=23217487449
+1000-1999数据链接：https://pan.baidu.com/s/1SvCgulQt8rn8m7w0cbMExQ 密码：jg7m
 
 
 # 概况
