@@ -1,6 +1,6 @@
-﻿# 缘由 
+# 缘由 
 
-QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加轻松。前提是您需要获得各OJ的测试数据。
+QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加轻松。前提是您需要获得各OJ的测试数据。**请注意本方法只用在您的机器上运行即可，不用再OJ服务器运行！**
 
 # 概况
 
@@ -9,13 +9,16 @@ QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加�
 * 爬虫部分-WebSpider
 * 自动化加题部分-AddProblem
 
-因为懒得解析markdown文档，所有用了爬虫scrapy,并且爬虫获取到的数据相对而言文档更容易解析与添加。如果您能够通过pandoc转文件后，将文本提取出来也可以。
+用了爬虫scrapy,并且爬虫获取到的数据相对而言文档更容易解析与添加。如果您能够通过pandoc转文件后，将文本提取出来也可以。
 
 # 需要安装的软件
 
-* Python
+* Python3.6
 * MongoDB(V3.4)
 * MongoDB 客户端工具-推荐使用RoBo 3T
+
+Mongo安装教程：[mongo安装](https://blog.csdn.net/heshushun/article/details/77776706)（教程源于-李子园的梦想）
+
 
 # 数据（某OJ数据&已经解压完成的）
 1000-1999-Testcase数据链接：https://pan.baidu.com/s/1SvCgulQt8rn8m7w0cbMExQ 密码：jg7m
@@ -26,7 +29,15 @@ QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加�
 
 https://finen-1251602255.cos.ap-shanghai.myqcloud.com/file/bzoj_problem.zip
 
-您可以直接通过MongoDB将将该数据导入到您的Mongo中，导入命令请您自行搜索！
+您可以直接通过MongoDB将将该数据导入到您的Mongo中。
+导入命令如下：
+```
+linux下可以使用：mongorestore -d <db_name> <bson_folder>
+windows下可以使用：mongorestore.exe -d <db_name> <bson_folder>
+
+windows下： mongorestore.exe -d bzoj D:\Mongo\bin\dump\bzoj_problem\problem.bson
+linux下： mongorestore -d bzoj /usr/DB/bzoj_problem/problem.bson
+```
 
 > 如果您对爬虫有兴趣可以参看1.0版本进行对题目数据进行爬取。
 https://github.com/hirCodd/AutoAddProblem/blob/master/README_1.0.md
@@ -39,6 +50,18 @@ https://github.com/hirCodd/AutoAddProblem/blob/master/README_1.0.md
 1. webdriver
 2. selenium
 3. pymongo
+
+安装方法：
+```
+pip install selenium
+pip install pymongo
+```
+
+webdriver下载地址：[chromedriver](https://finen-1251602255.cos.ap-shanghai.myqcloud.com/file/chromedriver.exe)
+webdriver放置位置如下：
+
+![webdriver][4]
+
 
 * 执行自动加题
 > 也需要修改您的url以及mongoDB配置，以及OJ的管理员的用户名、密码。
@@ -64,6 +87,10 @@ https://github.com/hirCodd/AutoAddProblem/blob/master/README_1.0.md
 
 
 ![oj][1]
+![oj1][3]
+
 
   [1]: https://s1.ax2x.com/2018/06/02/71uIJ.png
   [2]: https://finen-1251602255.cos.ap-shanghai.myqcloud.com/images/github/autoaddproblem/dir.png
+  [3]: https://finen-1251602255.cos.ap-shanghai.myqcloud.com/images/github/autoaddproblem/p.png
+  [4]: https://finen-1251602255.cos.ap-shanghai.myqcloud.com/images/github/autoaddproblem/webdriver.png
