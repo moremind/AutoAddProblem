@@ -1,8 +1,8 @@
-# 缘由 
+## 缘由 
 
 QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加轻松。前提是您需要获得各OJ的测试数据。**请注意本方法只用在您的机器上运行即可，不用再OJ服务器运行！**
 
-# 概况
+## 概况
 
 目前主要模块分为
 
@@ -11,7 +11,7 @@ QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加�
 
 用了爬虫scrapy,并且爬虫获取到的数据相对而言文档更容易解析与添加。如果您能够通过pandoc转文件后，将文本提取出来也可以。
 
-# 需要安装的软件
+## 需要安装的软件
 
 * Python3.6
 * MongoDB(V3.4)
@@ -20,7 +20,7 @@ QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加�
 Mongo安装教程：[mongo安装](https://blog.csdn.net/heshushun/article/details/77776706)（教程源于-李子园的梦想）
 
 
-# 数据（某OJ数据&已经解压完成的）
+## 数据（某OJ数据&已经解压完成的）
 1000-1999-Testcase数据链接：https://pan.baidu.com/s/1SvCgulQt8rn8m7w0cbMExQ 密码：jg7m
 
 2000-2499-Testcase数据链接：https://pan.baidu.com/s/1tgr1M-VsRrzaEjXPmA3NCA 密码：4mpf
@@ -35,7 +35,7 @@ Mongo安装教程：[mongo安装](https://blog.csdn.net/heshushun/article/detail
 
 4500-4999-Testcase数据连接：https://pan.baidu.com/s/1Dz9bDHzkpsx9jOxHSp2IeQ 密码：tv9g
 
-# 题目数据
+## 题目数据
 
 https://finen-1251602255.cos.ap-shanghai.myqcloud.com/file/bzoj_problem.zip
 
@@ -52,11 +52,11 @@ linux下： mongorestore -d bzoj /usr/DB/bzoj_problem/problem.bson
 > 如果您对爬虫有兴趣可以参看1.0版本进行对题目数据进行爬取。
 https://github.com/hirCodd/AutoAddProblem/blob/master/README_1.0.md
 
-# 图片位置
+## 图片位置
 在本项目中已经提供BZOJ，所以您可以直接在BZOJ解压包中看到JudgeOnline找到upload以及images两个图片目录，你只需要将这个两个目录复制到已经部署好的qduoj的public目录下即可。
 ![dir][2]
 
-# 安装自动加题所需要的库
+## 安装自动加题所需要的库
 1. webdriver
 2. selenium
 3. pymongo
@@ -84,7 +84,7 @@ webdriver放置位置如下：
 * 执行：python add_problem.py
 
 
-# 某些bug
+## 某些bug
 * 因为BZOJ数据问题，可能导致添加题目突然中止，你可能需要执行删除数据库文档的命令，然后重新执行：python add_problem.py即可再次添加题目。
 > 在delete.py中，你需要修改count的值以及for循环的值，删除已经添加得文档。示例如下：
 
