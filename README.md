@@ -1,3 +1,5 @@
+BZOJ数据：链接: https://pan.baidu.com/s/1ug7XIaOKxHPyZHV4iNxS8Q?pwd=uyj9 提取码: uyj9 复制这段内容后打开百度网盘手机App，操作更方便哦
+
 ## 缘由 
 
 QDUOJ的开发以及众多OJ的题库，使得我们自动化添加题目更加轻松。前提是您需要获得各OJ的测试数据。**请注意本方法只用在您的机器上运行即可，不用再OJ服务器运行！**
